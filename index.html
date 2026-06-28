@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHER | Luxury Immersive Technology Studio</title>
+    <meta name="description" content="AETHER crafts transcendent digital experiences blending physical and virtual worlds. Luxury immersive installations, spatial computing, and generative art for visionary brands.">
+    <meta name="keywords" content="immersive technology, luxury digital experiences, spatial computing, generative art, projection mapping, holographic displays, interactive installations">
+    <meta name="author" content="Oltion Shumolli">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AETHER | Luxury Immersive Technology Studio">
+    <meta property="og:description" content="We craft transcendent digital experiences that blur the boundary between physical and virtual worlds.">
+    <meta property="og:image" content="https://aetherstudio.com/assets/images/hero-bg.jpg">
+    <meta property="og:url" content="https://aetherstudio.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AETHER | Luxury Immersive Technology Studio">
+    <meta name="twitter:description" content="We craft transcendent digital experiences that blur the boundary between physical and virtual worlds.">
+    <meta name="twitter:image" content="https://aetherstudio.com/assets/images/hero-bg.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" as="image" href="assets/images/hero-bg.jpg">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen" role="status" aria-label="Loading">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <svg viewBox="0 0 120 40" aria-hidden="true">
+                    <text x="0" y="32" font-family="Playfair Display" font-size="28" font-weight="600" fill="currentColor">AETHER</text>
+                </svg>
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+            <p class="loading-text">Crafting Immersive Experiences</p>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" role="progressbar" aria-label="Scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" aria-hidden="true">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="site-header" role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="#" class="nav-logo" aria-label="AETHER Home">
+                    <svg viewBox="0 0 140 40" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:var(--color-gold)"/>
+                                <stop offset="100%" style="stop-color:var(--color-gold-light)"/>
+                            </linearGradient>
+                        </defs>
+                        <text x="0" y="30" font-family="Playfair Display" font-size="24" font-weight="600" fill="url(#logo-gradient)">AETHER</text>
+                    </svg>
+                </a>
+                
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                    <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
+                    <li role="none"><a href="#portfolio" class="nav-link" role="menuitem">Work</a></li>
+                    <li role="none"><a href="#process" class="nav-link" role="menuitem">Process</a></li>
+                    <li role="none"><a href="#team" class="nav-link" role="menuitem">Team</a></li>
+                    <li role="none"><a href="#contact" class="nav-link nav-cta" role="menuitem">Contact</a></li>
+                </ul>
+                
+                <div class="nav-controls">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                        <svg class="theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+            <ul class="mobile-nav-menu">
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#services" class="mobile-nav-link">Services</a></li>
+                <li><a href="#portfolio" class="mobile-nav-link">Work</a></li>
+                <li><a href="#process" class="mobile-nav-link">Process</a></li>
+                <li><a href="#team" class="mobile-nav-link">Team</a></li>
+                <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+                <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+                <li><a href="#contact" class="mobile-nav-link mobile-nav-cta">Contact</a></li>
+            </ul>
+            <div class="mobile-nav-footer">
+                <p>hello@aetherstudio.com</p>
+                <p>+1 (212) 555-0147</p>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-label="Hero">
+            <div class="hero-bg">
+                <img src="assets/images/hero-bg.jpg" alt="Abstract immersive technology art installation with golden particles and crystalline structures" loading="eager">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-particles" id="hero-particles" aria-hidden="true"></div>
+            
+            <div class="hero-content">
+                <div class="hero-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    <span class="eyebrow-text">Luxury Immersive Technology</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line" data-reveal>Where Digital</span>
+                    <span class="title-line title-accent" data-reveal>Meets Divine</span>
+                </h1>
+                
+                <p class="hero-description" data-reveal>
+                    We craft transcendent digital experiences that blur the boundary between physical and virtual worlds. For luxury brands, cultural institutions, and visionary minds.
+                </p>
+                
+                <div class="hero-cta" data-reveal>
+                    <a href="#portfolio" class="btn btn-primary">
+                        <span>Explore Our Work</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#about" class="btn btn-outline">
+                        <span>Discover AETHER</span>
+                    </a>
+                </div>
+                
+                <div class="hero-stats" data-reveal>
+                    <div class="hero-stat">
+                        <span class="stat-number" data-count="150">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Installations</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="stat-number" data-count="12">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="stat-number" data-count="98">0</span>
+                        <span class="stat-suffix">%</span>
+                        <span class="stat-label">Client Retention</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-scroll-indicator" aria-hidden="true">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span class="scroll-text">Scroll</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about" aria-label="About AETHER">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-media" data-reveal>
+                        <div class="about-image-wrapper">
+                            <img src="assets/images/about-studio.jpg" alt="AETHER luxury creative technology studio interior with LED screens and ambient lighting" loading="lazy">
+                            <div class="about-image-glow"></div>
+                        </div>
+                        <div class="about-floating-card">
+                            <span class="floating-card-number">10+</span>
+                            <span class="floating-card-text">Years of<br>Excellence</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-content">
+                        <div class="section-header" data-reveal>
+                            <span class="section-eyebrow">About Us</span>
+                            <h2 class="section-title">We Are The <em>Alchemists</em> of Digital Experience</h2>
+                        </div>
+                        
+                        <div class="about-text" data-reveal>
+                            <p>At AETHER, we don't just create digital installations — we orchestrate moments of wonder. Since 2016, our collective of artists, engineers, and dreamers has been pushing the boundaries of what's possible when technology meets artistry.</p>
+                            <p>We partner with the world's most prestigious brands and cultural institutions to create immersive experiences that captivate, inspire, and transform. From projection-mapped automotive launches to generative art installations in museums, every project is a masterpiece.</p>
+                        </div>
+                        
+                        <div class="about-values" data-reveal>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                    </svg>
+                                </div>
+                                <div class="value-content">
+                                    <h4>Innovation First</h4>
+                                    <p>Pioneering new technologies before they become mainstream</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <div class="value-content">
+                                    <h4>Pixel-Perfect Quality</h4>
+                                    <p>Obsessive attention to every visual detail</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/>
+                                    </svg>
+                                </div>
+                                <div class="value-content">
+                                    <h4>Client Partnership</h4>
+                                    <p>Collaborative approach ensuring vision alignment</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="btn btn-primary" data-reveal>
+                            <span>Start a Project</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="services" aria-label="Our Services">
+            <div class="services-bg-pattern" aria-hidden="true"></div>
+            <div class="container">
+                <div class="section-header section-header-center" data-reveal>
+                    <span class="section-eyebrow">What We Do</span>
+                    <h2 class="section-title">Services Beyond <em>Imagination</em></h2>
+                    <p class="section-description">Six disciplines, one obsession: creating experiences that leave lasting impressions.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <article class="service-card" data-reveal data-delay="0">
+                        <div class="service-card-glow"></div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <rect x="6" y="14" width="36" height="20" rx="2"/>
+                                <path d="M14 14V10a4 4 0 014-4h12a4 4 0 014 4v4"/>
+                                <circle cx="18" cy="24" r="2" fill="currentColor"/>
+                                <circle cx="30" cy="24" r="2" fill="currentColor"/>
+                                <path d="M18 24h12"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Immersive Installations</h3>
+                        <p class="service-description">Multi-sensory environments that transport audiences into new dimensions through light, sound, and interactive technology.</p>
+                        <a href="#contact" class="service-link">
+                            <span>Learn More</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card" data-reveal data-delay="100">
+                        <div class="service-card-glow"></div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M24 4L4 14v20l20 10 20-10V14L24 4z"/>
+                                <path d="M4 14l20 10 20-10"/>
+                                <path d="M24 24v20"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Spatial Computing</h3>
+                        <p class="service-description">AR, VR, and mixed reality experiences that merge digital content with physical spaces for unprecedented engagement.</p>
+                        <a href="#contact" class="service-link">
+                            <span>Learn More</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card" data-reveal data-delay="200">
+                        <div class="service-card-glow"></div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <circle cx="24" cy="24" r="20"/>
+                                <path d="M24 4a20 20 0 010 40"/>
+                                <circle cx="24" cy="24" r="8"/>
+                                <path d="M24 16v-6M24 38v-6M16 24h-6M38 24h-6"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Generative Art</h3>
+                        <p class="service-description">Algorithmic masterpieces that evolve in real-time, creating unique visual narratives powered by custom code and AI.</p>
+                        <a href="#contact" class="service-link">
+                            <span>Learn More</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card" data-reveal data-delay="0">
+                        <div class="service-card-glow"></div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <rect x="4" y="8" width="40" height="32" rx="2"/>
+                                <path d="M4 16h40"/>
+                                <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                                <circle cx="18" cy="12" r="1" fill="currentColor"/>
+                                <circle cx="24" cy="12" r="1" fill="currentColor"/>
+                                <path d="M16 28l8-8 8 8"/>
+                                <path d="M16 32h16"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Projection Mapping</h3>
+                        <p class="service-description">Transform any surface into a canvas with stunning visual projections that defy perception and captivate audiences.</p>
+                        <a href="#contact" class="service-link">
+                            <span>Learn More</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card" data-reveal data-delay="100">
+                        <div class="service-card-glow"></div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M24 4v8M24 36v8M4 24h8M36 24h8"/>
+                                <circle cx="24" cy="24" r="10"/>
+                                <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Holographic Displays</h3>
+                        <p class="service-description">Three-dimensional visual experiences that float in mid-air, creating breathtaking product showcases and brand activations.</p>
+                        <a href="#contact" class="service-link">
+                            <span>Learn More</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card" data-reveal data-delay="200">
+                        <div class="service-card-glow"></div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M24 4C12 4 4 12 4 24s8 20 20 20 20-8 20-20S36 4 24 4z"/>
+                                <path d="M4 24h40"/>
+                                <path d="M24 4c-6 8-6 32 0 40"/>
+                                <path d="M24 4c6 8 6 32 0 40"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Interactive Experiences</h3>
+                        <p class="service-description">Gesture-controlled, touch-responsive, and motion-activated installations that invite audiences to become co-creators.</p>
+                        <a href="#contact" class="service-link">
+                            <span>Learn More</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="statistics" id="statistics" aria-label="Key Statistics">
+            <div class="statistics-bg" aria-hidden="true">
+                <div class="stats-particle-field" id="stats-particles"></div>
+            </div>
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item" data-reveal>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M24 4L6 14v20l18 10 18-10V14L24 4z"/>
+                                <path d="M24 24v20"/>
+                                <path d="M24 24L6 14"/>
+                                <path d="M24 24l18-10"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-count="150">0</span>
+                            <span class="stat-suffix">+</span>
+                        </div>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    
+                    <div class="stat-item" data-reveal>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <circle cx="24" cy="24" r="20"/>
+                                <path d="M24 4v40"/>
+                                <path d="M4 24h40"/>
+                                <circle cx="24" cy="24" r="8"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-count="12">0</span>
+                            <span class="stat-suffix"></span>
+                        </div>
+                        <span class="stat-label">Countries Reached</span>
+                    </div>
+                    
+                    <div class="stat-item" data-reveal>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M24 4l6 12 13 2-10 9 3 13-12-7-12 7 3-13L5 18l13-2z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-count="28">0</span>
+                            <span class="stat-suffix"></span>
+                        </div>
+                        <span class="stat-label">Industry Awards</span>
+                    </div>
+                    
+                    <div class="stat-item" data-reveal>
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path d="M38 42H10a4 4 0 01-4-4V10a4 4 0 014-4h28a4 4 0 014 4v28a4 4 0 01-4 4z"/>
+                                <path d="M14 24l6 6 14-14"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-count="98">0</span>
+                            <span class="stat-suffix">%</span>
+                        </div>
+                        <span class="stat-label">Client Retention</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio section" id="portfolio" aria-label="Our Work">
+            <div class="container">
+                <div class="section-header section-header-center" data-reveal>
+                    <span class="section-eyebrow">Portfolio</span>
+                    <h2 class="section-title">Selected <em>Masterpieces</em></h2>
+                    <p class="section-description">A curated collection of our most transformative immersive experiences.</p>
+                </div>
+                
+                <div class="portfolio-filter" data-reveal role="tablist" aria-label="Portfolio filter">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+                    <button class="filter-btn" data-filter="installation" role="tab" aria-selected="false">Installations</button>
+                    <button class="filter-btn" data-filter="fashion" role="tab" aria-selected="false">Fashion</button>
+                    <button class="filter-btn" data-filter="automotive" role="tab" aria-selected="false">Automotive</button>
+                    <button class="filter-btn" data-filter="hospitality" role="tab" aria-selected="false">Hospitality</button>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <article class="portfolio-item" data-category="installation" data-reveal>
+                        <div class="portfolio-image">
+                            <img src="assets/images/portfolio-1.jpg" alt="Ethereal Currents immersive installation at Museum of Modern Art" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <span class="portfolio-category">Installation</span>
+                                    <h3 class="portfolio-title">Ethereal Currents</h3>
+                                    <p class="portfolio-location">Museum of Modern Art, New York</p>
+                                    <a href="#contact" class="portfolio-link" aria-label="View Ethereal Currents project">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-category="fashion" data-reveal data-delay="100">
+                        <div class="portfolio-image">
+                            <img src="assets/images/portfolio-2.jpg" alt="Digital Couture holographic fashion display for Maison V" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <span class="portfolio-category">Fashion</span>
+                                    <h3 class="portfolio-title">Digital Couture</h3>
+                                    <p class="portfolio-location">Maison V Flagship, Paris</p>
+                                    <a href="#contact" class="portfolio-link" aria-label="View Digital Couture project">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-category="installation" data-reveal data-delay="200">
+                        <div class="portfolio-image">
+                            <img src="assets/images/portfolio-3.jpg" alt="Spectra VR spatial computing experience at Tate Modern" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <span class="portfolio-category">Installation</span>
+                                    <h3 class="portfolio-title">Spectra VR</h3>
+                                    <p class="portfolio-location">Tate Modern, London</p>
+                                    <a href="#contact" class="portfolio-link" aria-label="View Spectra VR project">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-category="automotive" data-reveal>
+                        <div class="portfolio-image">
+                            <img src="assets/images/portfolio-4.jpg" alt="Aurora Launch projection mapping for luxury automotive reveal" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <span class="portfolio-category">Automotive</span>
+                                    <h3 class="portfolio-title">Aurora Launch</h3>
+                                    <p class="portfolio-location">Geneva International Motor Show</p>
+                                    <a href="#contact" class="portfolio-link" aria-label="View Aurora Launch project">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-category="installation" data-reveal data-delay="100">
+                        <div class="portfolio-image">
+                            <img src="assets/images/portfolio-5.jpg" alt="Luminous Garden generative art installation at Art Basel" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <span class="portfolio-category">Installation</span>
+                                    <h3 class="portfolio-title">Luminous Garden</h3>
+                                    <p class="portfolio-location">Art Basel, Miami</p>
+                                    <a href="#contact" class="portfolio-link" aria-label="View Luminous Garden project">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-category="hospitality" data-reveal data-delay="200">
+                        <div class="portfolio-image">
+                            <img src="assets/images/portfolio-6.jpg" alt="Celestial Lobby digital ceiling installation at The Opulent Hotel" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <span class="portfolio-category">Hospitality</span>
+                                    <h3 class="portfolio-title">Celestial Lobby</h3>
+                                    <p class="portfolio-location">The Opulent Hotel, Dubai</p>
+                                    <a href="#contact" class="portfolio-link" aria-label="View Celestial Lobby project">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="portfolio-cta" data-reveal>
+                    <a href="#contact" class="btn btn-primary btn-large">
+                        <span>Discuss Your Project</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process section" id="process" aria-label="Our Process">
+            <div class="container">
+                <div class="section-header section-header-center" data-reveal>
+                    <span class="section-eyebrow">Our Process</span>
+                    <h2 class="section-title">From Vision to <em>Reality</em></h2>
+                    <p class="section-description">A refined methodology ensuring every project achieves extraordinary results.</p>
+                </div>
+                
+                <div class="process-timeline">
+                    <div class="process-line" aria-hidden="true">
+                        <div class="process-line-progress"></div>
+                    </div>
+                    
+                    <div class="process-steps">
+                        <article class="process-step" data-reveal>
+                            <div class="step-number">01</div>
+                            <div class="step-content">
+                                <div class="step-icon">
+                                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <circle cx="24" cy="24" r="20"/>
+                                        <path d="M24 14v10l7 7"/>
+                                    </svg>
+                                </div>
+                                <h3 class="step-title">Discovery</h3>
+                                <p class="step-description">We immerse ourselves in your brand, audience, and objectives to uncover the insights that will drive an extraordinary experience.</p>
+                            </div>
+                        </article>
+                        
+                        <article class="process-step" data-reveal>
+                            <div class="step-number">02</div>
+                            <div class="step-content">
+                                <div class="step-icon">
+                                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <path d="M24 4l18 10v20L24 44 6 34V14L24 4z"/>
+                                        <path d="M24 24v20"/>
+                                        <path d="M24 24L6 14"/>
+                                        <path d="M24 24l18-10"/>
+                                    </svg>
+                                </div>
+                                <h3 class="step-title">Concept Design</h3>
+                                <p class="step-description">Our creative team develops compelling visual narratives and interaction designs that push creative boundaries while aligning with your vision.</p>
+                            </div>
+                        </article>
+                        
+                        <article class="process-step" data-reveal>
+                            <div class="step-number">03</div>
+                            <div class="step-content">
+                                <div class="step-icon">
+                                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <rect x="4" y="8" width="40" height="32" rx="2"/>
+                                        <path d="M4 16h40"/>
+                                        <path d="M16 28l6 6 10-10"/>
+                                    </svg>
+                                </div>
+                                <h3 class="step-title">Technical Build</h3>
+                                <p class="step-description">Our engineering team brings designs to life using cutting-edge technology, custom software, and meticulous craftsmanship.</p>
+                            </div>
+                        </article>
+                        
+                        <article class="process-step" data-reveal>
+                            <div class="step-number">04</div>
+                            <div class="step-content">
+                                <div class="step-icon">
+                                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <path d="M24 4l6 12 13 2-10 9 3 13-12-7-12 7 3-13L5 18l13-2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="step-title">Deployment</h3>
+                                <p class="step-description">We handle every aspect of installation, calibration, and on-site testing to ensure a flawless launch experience.</p>
+                            </div>
+                        </article>
+                        
+                        <article class="process-step" data-reveal>
+                            <div class="step-number">05</div>
+                            <div class="step-content">
+                                <div class="step-icon">
+                                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <path d="M24 4v8M24 36v8M4 24h8M36 24h8"/>
+                                        <circle cx="24" cy="24" r="12"/>
+                                        <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <h3 class="step-title">Ongoing Support</h3>
+                                <p class="step-description">Our commitment extends beyond launch with continuous monitoring, content updates, and optimization services.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-us section" id="why-us" aria-label="Why Choose Us">
+            <div class="container">
+                <div class="why-us-grid">
+                    <div class="why-us-content">
+                        <div class="section-header" data-reveal>
+                            <span class="section-eyebrow">Why AETHER</span>
+                            <h2 class="section-title">The Difference Is in the <em>Details</em></h2>
+                        </div>
+                        
+                        <p class="why-us-intro" data-reveal>We combine artistic vision with technical mastery to create experiences that no other studio can replicate.</p>
+                        
+                        <div class="features-list">
+                            <div class="feature-item" data-reveal>
+                                <div class="feature-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Bespoke Technology Stack</h4>
+                                    <p>Custom-built software and hardware solutions tailored to each project</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item" data-reveal>
+                                <div class="feature-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Luxury Brand Expertise</h4>
+                                    <p>Deep understanding of high-end aesthetic and brand sensitivity</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item" data-reveal>
+                                <div class="feature-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Global Installation Capability</h4>
+                                    <p>Full-service deployment anywhere in the world</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item" data-reveal>
+                                <div class="feature-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>End-to-End Partnership</h4>
+                                    <p>From concept through ongoing support and evolution</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="why-us-visual" data-reveal>
+                        <div class="why-us-card">
+                            <div class="why-us-card-glow"></div>
+                            <div class="why-us-card-content">
+                                <div class="card-logo">
+                                    <svg viewBox="0 0 120 40" aria-hidden="true">
+                                        <text x="0" y="30" font-family="Playfair Display" font-size="24" font-weight="600" fill="currentColor">AETHER</text>
+                                    </svg>
+                                </div>
+                                <div class="card-divider"></div>
+                                <div class="card-metrics">
+                                    <div class="card-metric">
+                                        <span class="card-metric-value">150+</span>
+                                        <span class="card-metric-label">Projects</span>
+                                    </div>
+                                    <div class="card-metric">
+                                        <span class="card-metric-value">12</span>
+                                        <span class="card-metric-label">Countries</span>
+                                    </div>
+                                    <div class="card-metric">
+                                        <span class="card-metric-value">28</span>
+                                        <span class="card-metric-label">Awards</span>
+                                    </div>
+                                </div>
+                                <div class="card-tagline">
+                                    <p>"Transforming spaces into extraordinary experiences since 2016"</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-elements" aria-hidden="true">
+                            <div class="floating-element fe-1"></div>
+                            <div class="floating-element fe-2"></div>
+                            <div class="floating-element fe-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section" id="testimonials" aria-label="Testimonials">
+            <div class="testimonials-bg" aria-hidden="true"></div>
+            <div class="container">
+                <div class="section-header section-header-center" data-reveal>
+                    <span class="section-eyebrow">Testimonials</span>
+                    <h2 class="section-title">Words From Our <em>Partners</em></h2>
+                </div>
+                
+                <div class="testimonials-slider" data-reveal>
+                    <div class="testimonials-track" id="testimonials-track">
+                        <blockquote class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+                                    <path d="M14 24c-3.3 0-6-2.7-6-6V12c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v12c0 8.8-7.2 16-16 16v-6c5.5 0 10-4.5 10-10h-6zm20 0c-3.3 0-6-2.7-6-6V12c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v12c0 8.8-7.2 16-16 16v-6c5.5 0 10-4.5 10-10h-6z"/>
+                                </svg>
+                            </div>
+                            <p class="testimonial-text">AETHER transformed our flagship store into a destination. The holographic fashion display they created generated a 340% increase in foot traffic and became the most photographed installation in Paris Fashion Week history.</p>
+                            <footer class="testimonial-author">
+                                <div class="author-avatar" style="background: linear-gradient(135deg, #D4AF37, #8B7355);">SV</div>
+                                <div class="author-info">
+                                    <cite class="author-name">Sophie Vauclair</cite>
+                                    <span class="author-title">Creative Director, Maison V</span>
+                                </div>
+                            </footer>
+                        </blockquote>
+                        
+                        <blockquote class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+                                    <path d="M14 24c-3.3 0-6-2.7-6-6V12c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v12c0 8.8-7.2 16-16 16v-6c5.5 0 10-4.5 10-10h-6zm20 0c-3.3 0-6-2.7-6-6V12c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v12c0 8.8-7.2 16-16 16v-6c5.5 0 10-4.5 10-10h-6z"/>
+                                </svg>
+                            </div>
+                            <p class="testimonial-text">Working with AETHER on our vehicle launch was extraordinary. The projection mapping experience they created had our audience in awe. It set a new standard for automotive reveals and perfectly captured our brand's essence.</p>
+                            <footer class="testimonial-author">
+                                <div class="author-avatar" style="background: linear-gradient(135deg, #3B82F6, #1E40AF);">MR</div>
+                                <div class="author-info">
+                                    <cite class="author-name">Marcus Roth</cite>
+                                    <span class="author-title">Head of Global Marketing, Aurora Motors</span>
+                                </div>
+                            </footer>
+                        </blockquote>
+                        
+                        <blockquote class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+                                    <path d="M14 24c-3.3 0-6-2.7-6-6V12c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v12c0 8.8-7.2 16-16 16v-6c5.5 0 10-4.5 10-10h-6zm20 0c-3.3 0-6-2.7-6-6V12c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v12c0 8.8-7.2 16-16 16v-6c5.5 0 10-4.5 10-10h-6z"/>
+                                </svg>
+                            </div>
+                            <p class="testimonial-text">The Celestial Lobby installation exceeded every expectation. Guests regularly describe it as 'transcendent' and 'unforgettable.' AETHER understood our vision and elevated it beyond what we thought possible.</p>
+                            <footer class="testimonial-author">
+                                <div class="author-avatar" style="background: linear-gradient(135deg, #10B981, #059669);">KA</div>
+                                <div class="author-info">
+                                    <cite class="author-name">Khalid Al-Rashid</cite>
+                                    <span class="author-title">CEO, The Opulent Hotel Group</span>
+                                </div>
+                            </footer>
+                        </blockquote>
+                    </div>
+                    
+                    <div class="testimonials-controls">
+                        <button class="testimonial-btn testimonial-prev" id="testimonial-prev" aria-label="Previous testimonial">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M19 12H5M12 19l-7-7 7-7"/>
+                            </svg>
+                        </button>
+                        <div class="testimonials-dots" role="tablist" aria-label="Testimonial navigation">
+                            <button class="dot active" data-index="0" role="tab" aria-label="Testimonial 1" aria-selected="true"></button>
+                            <button class="dot" data-index="1" role="tab" aria-label="Testimonial 2" aria-selected="false"></button>
+                            <button class="dot" data-index="2" role="tab" aria-label="Testimonial 3" aria-selected="false"></button>
+                        </div>
+                        <button class="testimonial-btn testimonial-next" id="testimonial-next" aria-label="Next testimonial">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team section" id="team" aria-label="Our Team">
+            <div class="container">
+                <div class="section-header section-header-center" data-reveal>
+                    <span class="section-eyebrow">The Collective</span>
+                    <h2 class="section-title">Visionaries Behind the <em>Magic</em></h2>
+                    <p class="section-description">A curated team of artists, engineers, and dreamers united by an obsession with the extraordinary.</p>
+                </div>
+                
+                <div class="team-grid">
+                    <article class="team-card" data-reveal>
+                        <div class="team-image">
+                            <img src="assets/images/team-1.jpg" alt="Elena Vasquez, Founder & Creative Director" loading="lazy">
+                            <div class="team-overlay">
+                                <div class="team-social">
+                                    <a href="#" aria-label="Elena's LinkedIn" class="social-link">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" aria-label="Elena's Twitter" class="social-link">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Elena Vasquez</h3>
+                            <span class="team-role">Founder & Creative Director</span>
+                            <p class="team-bio">Former digital artist at TeamLab. Pioneer in immersive experiential design with 15 years of expertise.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="team-card" data-reveal data-delay="100">
+                        <div class="team-image">
+                            <img src="assets/images/team-2.jpg" alt="David Chen, Technical Director" loading="lazy">
+                            <div class="team-overlay">
+                                <div class="team-social">
+                                    <a href="#" aria-label="David's LinkedIn" class="social-link">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" aria-label="David's GitHub" class="social-link">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">David Chen</h3>
+                            <span class="team-role">Technical Director</span>
+                            <p class="team-bio">Ex-Microsoft HoloLens engineer. Expert in real-time graphics, spatial computing, and custom hardware.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="team-card" data-reveal data-delay="200">
+                        <div class="team-image">
+                            <img src="assets/images/team-3.jpg" alt="Aiko Tanaka, Lead Experience Designer" loading="lazy">
+                            <div class="team-overlay">
+                                <div class="team-social">
+                                    <a href="#" aria-label="Aiko's LinkedIn" class="social-link">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" aria-label="Aiko's Dribbble" class="social-link">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                            <path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308a10.226 10.226 0 004.392-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4a10.226 10.226 0 006.29 2.166c1.42 0 2.77-.29 4.006-.816zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248a65.066 65.066 0 00-3.8-5.928 10.235 10.235 0 00-5.676 7.17zM9.6 2.052c.282.38 2.05 2.85 3.6 5.88 3.43-1.286 4.88-3.24 5.093-3.54A10.225 10.225 0 009.6 2.052zm10.125 3.883c-.24.33-1.86 2.354-5.493 3.82.23.47.456.945.67 1.417l.18.39c3.29-.416 6.564.34 6.89.425a10.216 10.216 0 00-2.247-6.052z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Aiko Tanaka</h3>
+                            <span class="team-role">Lead Experience Designer</span>
+                            <p class="team-bio">Award-winning UX designer specializing in spatial interfaces and human-computer interaction.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="team-card" data-reveal data-delay="300">
+                        <div class="team-image">
+                            <img src="assets/images/team-4.jpg" alt="James Okonkwo, Creative Technologist" loading="lazy">
+                            <div class="team-overlay">
+                                <div class="team-social">
+                                    <a href="#" aria-label="James's LinkedIn" class="social-link">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" aria-label="James's Twitter" class="social-link">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">James Okonkwo</h3>
+                            <span class="team-role">Creative Technologist</span>
+                            <p class="team-bio">Generative artist and creative coder. Former resident at MIT Media Lab's Future Sketches group.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq section" id="faq" aria-label="Frequently Asked Questions">
+            <div class="container">
+                <div class="faq-grid">
+                    <div class="faq-header">
+                        <div class="section-header" data-reveal>
+                            <span class="section-eyebrow">FAQ</span>
+                            <h2 class="section-title">Common <em>Questions</em></h2>
+                        </div>
+                        <p class="faq-intro" data-reveal>Everything you need to know about working with AETHER. Don't see your question? Reach out directly.</p>
+                        <a href="#contact" class="btn btn-outline" data-reveal>Ask a Question</a>
+                    </div>
+                    
+                    <div class="faq-list" data-reveal>
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>What types of spaces can you transform?</span>
+                                <span class="faq-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"/>
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>We've transformed everything from intimate retail boutiques to massive concert halls, museum galleries, hotel lobbies, automotive showrooms, and outdoor architectural facades. Our team assesses each space's unique characteristics to design the optimal immersive experience.</p>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>What is the typical project timeline?</span>
+                                <span class="faq-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"/>
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Project timelines vary based on complexity. A focused installation typically takes 8-12 weeks from concept to deployment. Larger, more complex experiences may require 4-6 months. We provide detailed timelines during our discovery phase.</p>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>Do you provide ongoing maintenance and support?</span>
+                                <span class="faq-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"/>
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Absolutely. We offer comprehensive maintenance packages including 24/7 remote monitoring, on-site technical support, content updates, and seasonal refreshes. Our goal is ensuring your installation performs flawlessly for years.</p>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>What is your pricing structure?</span>
+                                <span class="faq-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"/>
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Each project is uniquely priced based on scope, technology requirements, and timeline. We provide detailed proposals after the discovery phase. Projects typically start from $150,000 for focused installations.</p>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>Can you work with international clients?</span>
+                                <span class="faq-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"/>
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Yes, we have delivered projects across 12 countries and maintain a global network of installation partners. Our team is experienced in managing logistics, compliance, and cultural considerations for international deployments.</p>
+                            </div>
+                        </details>
+                        
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>What technologies do you specialize in?</span>
+                                <span class="faq-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19"/>
+                                        <line x1="5" y1="12" x2="19" y2="12"/>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>We specialize in projection mapping, LED and OLED installations, holographic displays, AR/VR/MR experiences, generative and AI-driven art, motion tracking, spatial audio, and interactive sensor systems. We also develop custom hardware and software when needed.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta" id="cta" aria-label="Call to Action">
+            <div class="cta-bg" aria-hidden="true">
+                <div class="cta-gradient"></div>
+                <div class="cta-particles" id="cta-particles"></div>
+            </div>
+            <div class="container">
+                <div class="cta-content" data-reveal>
+                    <h2 class="cta-title">Ready to Create Something <em>Extraordinary?</em></h2>
+                    <p class="cta-description">Let's discuss how we can transform your space into an unforgettable immersive experience that captivates and inspires.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary btn-large">
+                            <span>Start Your Project</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:hello@aetherstudio.com" class="btn btn-outline btn-large">
+                            <span>hello@aetherstudio.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact" aria-label="Contact Us">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="section-header" data-reveal>
+                            <span class="section-eyebrow">Contact</span>
+                            <h2 class="section-title">Let's Build Something <em>Extraordinary</em></h2>
+                        </div>
+                        
+                        <p class="contact-intro" data-reveal>Every masterpiece begins with a conversation. Reach out and let's explore the possibilities together.</p>
+                        
+                        <div class="contact-details" data-reveal>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:hello@aetherstudio.com">hello@aetherstudio.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Phone</span>
+                                    <a href="tel:+12125550147">+1 (212) 555-0147</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Studio</span>
+                                    <address>245 Hudson Street, New York, NY 10013</address>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper" data-reveal>
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required aria-required="true">
+                                <span class="form-error" id="name-error">Please enter your name</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required aria-required="true">
+                                <span class="form-error" id="email-error">Please enter a valid email</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company" class="form-label">Company</label>
+                                <input type="text" id="company" name="company" class="form-input" placeholder="Your company name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service" class="form-label">Service Interest</label>
+                                <select id="service" name="service" class="form-select">
+                                    <option value="">Select a service</option>
+                                    <option value="installation">Immersive Installation</option>
+                                    <option value="spatial">Spatial Computing</option>
+                                    <option value="generative">Generative Art</option>
+                                    <option value="projection">Projection Mapping</option>
+                                    <option value="holographic">Holographic Display</option>
+                                    <option value="interactive">Interactive Experience</option>
+                                    <option value="other">Something Else</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Tell Us About Your Project</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Describe your vision, timeline, and any specific requirements..." required aria-required="true"></textarea>
+                                <span class="form-error" id="message-error">Please describe your project</span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loader" aria-hidden="true"></span>
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                                </svg>
+                            </button>
+                            
+                            <div class="form-success" id="form-success" role="status">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                                <p>Thank you! We'll be in touch within 24 hours.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter" id="newsletter" aria-label="Newsletter">
+            <div class="container">
+                <div class="newsletter-content" data-reveal>
+                    <div class="newsletter-text">
+                        <h3 class="newsletter-title">Stay Inspired</h3>
+                        <p class="newsletter-description">Receive curated insights on immersive technology, generative art, and exclusive behind-the-scenes content from our studio.</p>
+                    </div>
+                    <form class="newsletter-form" id="newsletter-form" novalidate>
+                        <div class="newsletter-input-group">
+                            <input type="email" id="newsletter-email" name="email" class="newsletter-input" placeholder="Enter your email" required aria-required="true">
+                            <button type="submit" class="btn btn-primary newsletter-btn">
+                                <span>Subscribe</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="newsletter-error" id="newsletter-error">Please enter a valid email</span>
+                        <span class="newsletter-success" id="newsletter-success" role="status">Welcome to the AETHER community!</span>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-bg" aria-hidden="true"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo" aria-label="AETHER Home">
+                        <svg viewBox="0 0 140 40" aria-hidden="true">
+                            <text x="0" y="30" font-family="Playfair Display" font-size="24" font-weight="600" fill="currentColor">AETHER</text>
+                        </svg>
+                    </a>
+                    <p class="footer-tagline">Luxury Immersive Technology Studio</p>
+                    <p class="footer-description">Crafting transcendent digital experiences that blur the boundary between physical and virtual worlds.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <div class="footer-nav-column">
+                        <h4 class="footer-nav-title">Navigation</h4>
+                        <ul class="footer-nav-list">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Work</a></li>
+                            <li><a href="#process">Process</a></li>
+                            <li><a href="#team">Team</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h4 class="footer-nav-title">Services</h4>
+                        <ul class="footer-nav-list">
+                            <li><a href="#services">Immersive Installations</a></li>
+                            <li><a href="#services">Spatial Computing</a></li>
+                            <li><a href="#services">Generative Art</a></li>
+                            <li><a href="#services">Projection Mapping</a></li>
+                            <li><a href="#services">Holographic Displays</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h4 class="footer-nav-title">Connect</h4>
+                        <ul class="footer-nav-list">
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#newsletter">Newsletter</a></li>
+                            <li><a href="mailto:hello@aetherstudio.com">Careers</a></li>
+                            <li><a href="#">Press Kit</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    This is a demonstration concept project created for testing, educational, and portfolio purposes only.
+                </p>
+                <p class="footer-credit">
+                    Designed &amp; Developed by <a href="https://github.com/oltionshumollii" target="_blank" rel="noopener noreferrer">Oltion Shumolli</a>
+                </p>
+                <p class="footer-legal">
+                    &copy; 2026 Oltion Shumolli. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
